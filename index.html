@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="shortcut icon" type="image/png" href="Web-Icon (1).png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-zinc-600 h-screen flex justify-center items-center">
+    <form name="calc" class="w-[430px] bg-[aqua]p-5">
+      <input
+        class="w-5/6 shadow-md shadow-black h-10 mb-5 ml-9 border-none outline-none text-2xl text-start p-3"
+        type="text"
+        value=""
+        name="display"
+      />
+      <div
+        class="container shadow-lg shadow-gray-300 border-4 border-zinc-900 border-solid px-3 py-5 grid grid-cols-4 marker:grid-rows-3"
+      >
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-red-800 hover:bg-black"
+          value="AC"
+          onclick="del()"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-red-800 hover:bg-black"
+          value="C"
+          onclick="c()"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-blue-600 hover:bg-black"
+          value="%"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-blue-600 hover:bg-black"
+          value="-"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="9"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="8"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="7"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="*"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="6"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="5"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="4"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="/"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="3"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="2"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="1"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-blue-600 hover:bg-black"
+          value="+"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-yellow-300 hover:bg-black"
+          value="0"
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-white focus:text-blue-600 hover:bg-black"
+          value="."
+          onclick="data(this.value)"
+        />
+        <input
+          type="button"
+          class="w-[70px] h-[70px] rounded-full m-[2px] text-lg font-bold border-none outline-none transition hover:cursor-pointer text-black focus:text-green-600 hover:bg-white"
+          value="="
+          onclick="equal()"
+        />
+      </div>
+    </form>
+    <!-- Script -->
+    <script src="app.js"></script>
+  </body>
+</html>
